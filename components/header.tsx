@@ -56,7 +56,7 @@ export default function Header() {
           <RainbowButton className="text-sm px-4 py-2 md:text-base md:px-8 md:py-2">
             Join Now
           </RainbowButton>
-          <Link href="x.com" target="_blank">
+          <Link href="x.com" target="_blank" aria-label="Twitter">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -72,6 +72,7 @@ export default function Header() {
             variant="ghost"
             onClick={toggle}
             className="md:hidden"
+            aria-label="Menu"
           >
             {isOpen ? <X /> : <Menu />}
           </Button>

@@ -1,11 +1,12 @@
 "use client";
 
+import BlurFade from "@/components/ui/blur-fade";
 import OrbitingCircles from "@/components/ui/orbiting-circles";
 
 export default function Examples() {
   return (
     <section id="examples">
-      <div className="relative container mx-auto px-4 py-16 max-w-7xl ">
+      <div className="relative container mx-auto px-4 py-16 max-w-7xl flex flex-col gap-8">
         <h3
           className="text-center space-y-4 pb-6 mx-auto mt-4 max-w-xs text-3xl font-semibold sm:max-w-none sm:text-4xl md:text-5xl"
           style={{
@@ -16,78 +17,86 @@ export default function Examples() {
         </h3>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="flex flex-col gap-8">
-            <div className="flex flex-col gap-2">
-              <h4 className="text-2xl font-medium">Tech Tasks</h4>
-              <p>
-                Your neighbor could be a talented logo designer looking for
-                freelance projects. Instead of spending time searching for
-                agencies or freelancers online, you can find them instantly
-                through Sprynt. Whether you need a logo for your new business or
-                a quick rebranding, the right designer is just a few clicks
-                away.
-              </p>
-            </div>
-            <div className="flex flex-col gap-2">
-              <h4 className="text-2xl font-medium">Business Support</h4>
-              <p>
-                Let&apos;s say you work in an office building, and you need help
-                with cash flow forecasting for your business. One of the
-                professionals in the building may have the expertise you&apos;re
-                looking for. With Sprynt, you can connect with someone nearby
-                who has the skills to guide you through the process, saving you
-                time and resources.
-              </p>
-            </div>
-            <div className="flex flex-col gap-2">
-              <h4 className="text-2xl font-medium">Property Viewings</h4>
-              <p>
-                Imagine you need someone to view a property in Newcastle while
-                you&apos;re based in London. With Sprynt, you can post the task
-                and have it instantly matched with a local freelancer in
-                Newcastle who will carry out the viewing, provide you with
-                real-time updates, photos, and feedback—all while you manage
-                everything remotely.
-              </p>
-            </div>
+            <BlurFade inView delay={0.25}>
+              <div className="flex flex-col gap-2">
+                <h4 className="text-2xl font-medium">Tech Tasks</h4>
+                <p>
+                  Your neighbor could be a talented logo designer looking for
+                  freelance projects. Instead of spending time searching for
+                  agencies or freelancers online, you can find them instantly
+                  through Sprynt. Whether you need a logo for your new business
+                  or a quick rebranding, the right designer is just a few clicks
+                  away.
+                </p>
+              </div>
+            </BlurFade>
+            <BlurFade inView delay={0.25 * 2}>
+              <div className="flex flex-col gap-2">
+                <h4 className="text-2xl font-medium">Business Support</h4>
+                <p>
+                  Let&apos;s say you work in an office building, and you need
+                  help with cash flow forecasting for your business. One of the
+                  professionals in the building may have the expertise
+                  you&apos;re looking for. With Sprynt, you can connect with
+                  someone nearby who has the skills to guide you through the
+                  process, saving you time and resources.
+                </p>
+              </div>
+            </BlurFade>
+            <BlurFade inView delay={0.25 * 3}>
+              <div className="flex flex-col gap-2">
+                <h4 className="text-2xl font-medium">Property Viewings</h4>
+                <p>
+                  Imagine you need someone to view a property in Newcastle while
+                  you&apos;re based in London. With Sprynt, you can post the
+                  task and have it instantly matched with a local freelancer in
+                  Newcastle who will carry out the viewing, provide you with
+                  real-time updates, photos, and feedback—all while you manage
+                  everything remotely.
+                </p>
+              </div>
+            </BlurFade>
           </div>
-          <div className="relative md:flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg hidden">
-            {/* Inner Circles */}
-            <OrbitingCircles
-              className="size-[30px] border-none bg-transparent"
-              duration={20}
-              delay={20}
-              radius={80}
-            >
-              <Icons.whatsapp />
-            </OrbitingCircles>
-            <OrbitingCircles
-              className="size-[30px] border-none bg-transparent"
-              duration={20}
-              delay={10}
-              radius={80}
-            >
-              <Icons.notion />
-            </OrbitingCircles>
+          <BlurFade inView delay={0.25}>
+            <div className="relative md:flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg hidden">
+              {/* Inner Circles */}
+              <OrbitingCircles
+                className="size-[30px] border-none bg-transparent"
+                duration={20}
+                delay={20}
+                radius={80}
+              >
+                <Icons.whatsapp />
+              </OrbitingCircles>
+              <OrbitingCircles
+                className="size-[30px] border-none bg-transparent"
+                duration={20}
+                delay={10}
+                radius={80}
+              >
+                <Icons.notion />
+              </OrbitingCircles>
 
-            {/* Outer Circles (reverse) */}
-            <OrbitingCircles
-              className="size-[50px] border-none bg-transparent"
-              radius={190}
-              duration={20}
-              reverse
-            >
-              <Icons.googleDrive />
-            </OrbitingCircles>
-            <OrbitingCircles
-              className="size-[50px] border-none bg-transparent"
-              radius={190}
-              duration={20}
-              delay={20}
-              reverse
-            >
-              <Icons.gitHub />
-            </OrbitingCircles>
-          </div>
+              {/* Outer Circles (reverse) */}
+              <OrbitingCircles
+                className="size-[50px] border-none bg-transparent"
+                radius={190}
+                duration={20}
+                reverse
+              >
+                <Icons.googleDrive />
+              </OrbitingCircles>
+              <OrbitingCircles
+                className="size-[50px] border-none bg-transparent"
+                radius={190}
+                duration={20}
+                delay={20}
+                reverse
+              >
+                <Icons.gitHub />
+              </OrbitingCircles>
+            </div>
+          </BlurFade>
         </div>
 
         <div className="mt-32">

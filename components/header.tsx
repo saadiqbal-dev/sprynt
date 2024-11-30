@@ -6,6 +6,8 @@ import { useCallback, useState } from "react";
 
 import Icons from "@/components/icons";
 import { motion, AnimatePresence } from "framer-motion";
+import { RainbowButton } from "./ui/rainbow-button";
+import { Button } from "./ui/button";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,9 +53,7 @@ export default function Header() {
           </nav>
         </div>
         <div className="ms-auto flex items-center gap-5">
-          <button onClick={toggle} className="md:hidden">
-            {isOpen ? <X /> : <Menu />}
-          </button>
+          <RainbowButton>Join Now</RainbowButton>
           <Link href="x.com" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -65,6 +65,14 @@ export default function Header() {
               <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
             </svg>
           </Link>
+          <Button
+            size="icon"
+            variant="ghost"
+            onClick={toggle}
+            className="md:hidden"
+          >
+            {isOpen ? <X /> : <Menu />}
+          </Button>
         </div>
         <AnimatePresence>
           {isOpen && (

@@ -1,5 +1,6 @@
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import BlurFade from "@/components/ui/blur-fade";
+import { RainbowButton } from "@/components/ui/rainbow-button";
 import TextReveal from "@/components/ui/text-reveal";
 
 import { cn } from "@/lib/utils";
@@ -24,17 +25,20 @@ export default function ReadyToFindRightTalent() {
             repeatDelay={1}
             className={cn(
               "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
-              "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
+              "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
             )}
           />
         </div>
 
-        <div className="grid grid-cols-2 gap-8 mt-32">
-          <h5 className="text-4xl">
-            Join <span className="font-bold">Sprynt</span> today and get things
-            done, fast and efficiently!
-          </h5>
-        </div>
+        <BlurFade inView delay={0.25 * 2}>
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 mt-32">
+            <h5 className="text-4xl text-center">
+              Join <span className="font-bold">Sprynt</span> today and get
+              things done, fast and efficiently!
+            </h5>
+            <RainbowButton className="w-fit mx-auto">Join Now</RainbowButton>
+          </div>
+        </BlurFade>
       </div>
     </section>
   );

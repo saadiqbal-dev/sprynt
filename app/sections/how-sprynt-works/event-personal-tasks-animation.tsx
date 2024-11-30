@@ -13,32 +13,31 @@ interface Item {
 
 let notifications = [
   {
-    name: "Payment received",
-    description: "Magic UI",
+    name: "Waiter hired",
+    description: "Event staffing",
     time: "15m ago",
-
-    icon: "💸",
+    icon: "👨‍🍳",
     color: "#00C9A7",
   },
   {
-    name: "User signed up",
-    description: "Magic UI",
+    name: "Delivery scheduled",
+    description: "Same-day delivery",
     time: "10m ago",
-    icon: "👤",
+    icon: "📦",
     color: "#FFB800",
   },
   {
-    name: "New message",
-    description: "Magic UI",
+    name: "Cleaner booked",
+    description: "Home maintenance",
     time: "5m ago",
-    icon: "💬",
+    icon: "🧹",
     color: "#FF3D71",
   },
   {
-    name: "New event",
-    description: "Magic UI",
+    name: "Event confirmed",
+    description: "Staff scheduling",
     time: "2m ago",
-    icon: "🗞️",
+    icon: "📅",
     color: "#1E86FF",
   },
 ];
@@ -55,7 +54,7 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
         // light styles
         "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
         // dark styles
-        "transform-gpu dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
+        "transform-gpu dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"
       )}
     >
       <div className="flex flex-row items-center gap-3">
@@ -91,7 +90,7 @@ export function EventPersonalTasksAnimation({
     <div
       className={cn(
         "relative flex h-[250px] w-full flex-col p-6 overflow-hidden rounded-lg border bg-background md:shadow-xl",
-        className,
+        className
       )}
     >
       <AnimatedList>

@@ -53,7 +53,9 @@ export default function Header() {
           </nav>
         </div>
         <div className="ms-auto flex items-center gap-5">
-          <RainbowButton>Join Now</RainbowButton>
+          <RainbowButton className="text-sm px-4 py-2 md:text-base md:px-8 md:py-2">
+            Join Now
+          </RainbowButton>
           <Link href="x.com" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"

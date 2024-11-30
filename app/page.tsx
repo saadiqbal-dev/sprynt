@@ -13,7 +13,7 @@ import { RainbowButton } from "@/components/ui/rainbow-button";
 export default function Home() {
   return (
     <>
-      <div className="relative w-full h-[calc(100vh_-_50px)] flex flex-col items-center justify-center">
+      <div className="relative w-full h-[calc(100vh_-_50px)] flex flex-col items-center justify-center bg-black">
         <div className="flex flex-col items-center gap-6 md:gap-0 justify-center z-10 py-24 md:py-32 h-[calc(100vh_-_50px)]">
           <Announcement />
           <PageHeading />

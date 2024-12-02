@@ -108,7 +108,7 @@ export function MarqueeDemo() {
       <div>
         <Marquee pauseOnHover className="[--duration:80s] flex-shrink-0">
           {firstRow.map((review) => (
-            <ReviewCard key={review.body} {...review} />
+            <ReviewCard key={`${review.body}-${Math.random()}`} {...review} />
           ))}
         </Marquee>
         <Marquee
@@ -117,12 +117,12 @@ export function MarqueeDemo() {
           className="[--duration:80s] flex-shrink-0"
         >
           {secondRow.map((review) => (
-            <ReviewCard key={review.body} {...review} />
+            <ReviewCard key={`${review.body}-${Math.random()}`} {...review} />
           ))}
         </Marquee>
         <Marquee pauseOnHover className="[--duration:80s] flex-shrink-0">
           {thirdRow.map((review) => (
-            <ReviewCard key={review.body} {...review} />
+            <ReviewCard key={`${review.body}-${Math.random()}`} {...review} />
           ))}
         </Marquee>
       </div>

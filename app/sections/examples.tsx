@@ -99,7 +99,7 @@ export default function Examples() {
           </BlurFade>
         </div>
 
-        <div className="mt-32">
+        <div className="mt-32 md:mt-48">
           <p className="text-lg text-center">
             With Sprynt, you have access to the right talent instantly, whether
             you&apos;re looking for technical expertise, business support, or

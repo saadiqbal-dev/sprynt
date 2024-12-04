@@ -1,5 +1,6 @@
 import Announcement from "@/components/announcement";
 import PageHeading from "@/components/page-heading";
+import PageSubheading from "@/components/page-subheading";
 
 import HowSpryntWorks from "./sections/how-sprynt-works";
 import FindTalentForAnyTask from "./sections/find-talent-for-any-task";
@@ -13,11 +14,11 @@ import { MarqueeDemo } from "./sections/marquee";
 export default function Home() {
   return (
     <>
-      <div className="w-full h-[calc(100vh_-_50px)] flex flex-col items-center justify-center">
+      <div className="w-full min-h-[calc(100vh_-_50px)] flex flex-col items-center justify-center">
         <div className="flex flex-col items-center gap-6 md:gap-0 justify-center z-10 py-24 md:py-16 ">
           <Announcement />
           <PageHeading />
-          {/* <PageSubheading /> */}
+          <PageSubheading />
           <BlurFade
             inView
             delay={0.25 * 4}
@@ -26,15 +27,12 @@ export default function Home() {
             <RainbowButton>Join Now</RainbowButton>
           </BlurFade>
         </div>
-        <BlurFade
-          inView
-          className="top-0 left-0 h-full w-full overflow-clip object-cover z-0 "
-        >
+        <BlurFade inView className="rounded-xl overflow-clip">
           <video
             autoPlay
             loop
             muted
-            className="absolute rounded-xl top-0 left-0 h-[80%] w-full  object-cover z-0"
+            className="rounded-xl md:min-h-[calc(100vh_-_50px)] w-full object-cover z-0 px-4 md:px-0 h-[calc(100vh_-_124px)]"
           >
             <source src={"/video/vid-bg.mp4"} type="video/mp4" />
           </video>
@@ -47,7 +45,6 @@ export default function Home() {
         <FindTalentForAnyTask />
         <WhyChooseSprynt />
         <ReadyToFindRightTalent />
-
         <Examples />
       </div>
     </>

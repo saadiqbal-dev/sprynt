@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 
 import Footer from "@/components/footer";
@@ -24,7 +24,12 @@ export const metadata: Metadata = {
   ],
 };
 
-const inter = Inter({ subsets: ["latin"] });
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  fallback: ["sans-serif"],
+});
 
 export default function RootLayout({
   children,
@@ -36,7 +41,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background antialiased",
-          inter.className
+          manrope.className
         )}
       >
         <div className="relative flex min-h-screen flex-col bg-background">

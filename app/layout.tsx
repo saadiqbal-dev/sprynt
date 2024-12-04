@@ -41,7 +41,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background antialiased",
-          manrope.className
+          manrope.className,
         )}
       >
         <div className="relative flex min-h-screen flex-col bg-background">

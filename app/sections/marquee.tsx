@@ -81,7 +81,7 @@ const ReviewCard = ({ body }: { body: string }) => {
   return (
     <figure
       className={cn(
-        "relative w-90 flex-shrink-0 cursor-pointer overflow-hidden rounded-xl border p-4"
+        "relative w-90 flex-shrink-0 cursor-pointer overflow-hidden rounded-xl border p-4",
         // light styles
         // "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // // dark styles

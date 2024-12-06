@@ -8,7 +8,7 @@ export default function PageHeading() {
       <h1 className="text-center text-4xl font-bold md:leading-tight text-black  md:text-6xl flex flex-col items-center gap-2 z-20">
         <span className="flex items-center gap-4">
           <BlurFade inView delay={0.25}>
-            Meet Sprynt.
+            Sprynt Now
           </BlurFade>
         </span>
       </h1>

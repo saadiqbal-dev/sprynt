@@ -32,7 +32,7 @@ export default function Home() {
             autoPlay
             loop
             muted
-            className="rounded-xl md:min-h-[calc(100vh_-_50px)] w-full object-cover z-0 px-4 md:px-0 h-[calc(100vh_-_124px)]"
+            className="rounded-xl md:min-h-[calc(100vh_-_50px)] w-full object-cover z-0 px-4 md:px-0 aspect-video"
           >
             <source src={"/video/vid-bg.mp4"} type="video/mp4" />
           </video>
